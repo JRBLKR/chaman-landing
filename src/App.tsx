@@ -6,7 +6,12 @@ fontLink.rel = "stylesheet";
 document.head.appendChild(fontLink);
 
 const styleEl = document.createElement("style");
-styleEl.textContent = "html { scroll-behavior: smooth; }";
+styleEl.textContent = `
+  html { scroll-behavior: smooth; }
+  @media (max-width: 768px) {
+    .desktop-nav { display: none !important; }
+  }
+`;
 document.head.appendChild(styleEl);
 
 const C = {
@@ -40,7 +45,7 @@ function Nav() {
       <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
         <a href="#" style={{ display: "inline-block" }}><img src="/logo-vert.png" alt="Chaman" style={{ height: 32, width: "auto" }} /></a>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 36 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 36 }} className="desktop-nav">
           {[
             { label: "Mission", href: "#mission" },
             { label: "Solution", href: "#solution" },
@@ -59,7 +64,7 @@ function Nav() {
           background: C.green, color: "#fff", fontSize: "0.875rem",
           fontWeight: 700, fontFamily: "Inter, sans-serif",
           padding: "10px 22px", borderRadius: 8, textDecoration: "none",
-        }}>
+        }} className="desktop-nav">
           Demander une démo
         </a>
       </div>
@@ -90,7 +95,6 @@ function Hero() {
           lineHeight: 1.1,
           letterSpacing: "-0.04em",
           margin: "0 0 28px 0",
-          whiteSpace: "nowrap",
         }}>
           <span style={{ display: "block", color: C.creme }}>Détectez vos savings Achats.</span>
           <span style={{ display: "block", color: C.creme }}>Générez un plan d'actions.</span>

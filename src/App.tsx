@@ -368,7 +368,7 @@ function Tarifs() {
           {/* Abonnement : fond vert Chaman, écriture blanche */}
           <div style={{ background: C.green, borderRadius: 20, padding: "40px 36px", display: "flex", flexDirection: "column" }}>
             <p style={{ color: "#fff", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "Inter, sans-serif", margin: "0 0 20px 0" }}>Abonnement annuel</p>
-            <div style={{ color: "#fff", fontWeight: 800, fontSize: "2.8rem", letterSpacing: "-0.03em", fontFamily: "Inter, sans-serif", lineHeight: 1 }}>10 000 €</div>
+            <div style={{ color: "#fff", fontWeight: 800, fontSize: "2.8rem", letterSpacing: "-0.03em", fontFamily: "Inter, sans-serif", lineHeight: 1 }}>À partir de 10 000 €</div>
             <p style={{ color: "#fff", fontSize: "0.85rem", fontFamily: "Inter, sans-serif", margin: "8px 0 32px 0" }}>HT / an · Sans engagement au-delà</p>
             <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14, flexGrow: 1 }}>
               {["Analyses illimitées sur votre périmètre", "Toutes les règles de détection incluses", "Mises à jour et nouvelles fonctionnalités", "Support dédié"].map((item, i) => (
